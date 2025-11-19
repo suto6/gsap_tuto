@@ -19,3 +19,28 @@ html, body{
     height: 300px;
     width: 300px
 }
+#nav{
+    /* background-color: #283d0e; */
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* color: white; */
+
+}
+#part{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+     gap: 6rem;
+}
+#mid{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+}
