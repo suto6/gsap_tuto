@@ -130,3 +130,15 @@ gsap.to("#home2 h1", {
         end:"top -150%"
     }
 })
+
+var initialPath = `M 10 100 Q 500 100 990 100"`;
+
+var finalPath = `M 10 100 Q 500 100 990 100"`;
+
+var string = document.querySelector('#string');
+string.addEventListener('mouseenter', function(){
+    console.log("enter");
+})
+string.addEventListener('mouseleave', function(){
+    console.log("leave");
+})
