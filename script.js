@@ -114,8 +114,8 @@ gsap.from("#page3 #b", {
     scale: 0,
     delay:1,
     duration: 2,
-    rotate:"+=360",
-    ease: "power4.inOut"
+    // rotate:"+=360",
+    // ease: "power4.inOut"
 })
 gsap.to("#home2 h1", {
     transform:"translateX(-70%)",
