@@ -122,3 +122,16 @@ h3{
 svg{
     /* background-color: rgb(246,203,201); */
 }
+#cursor{
+    height: 40px;
+    width: 40px;
+    background-color: rgb(254, 254, 101);
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+}
+#main{
+    height: 90vh;
+    width: 100vw;
+background-color: #000000;
+}
