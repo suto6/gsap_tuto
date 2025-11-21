@@ -131,14 +131,34 @@ gsap.to("#home2 h1", {
     }
 })
 
-var initialPath = `M 10 100 Q 500 100 990 100"`;
+var initialPath = `M 10 100 Q 500 100 990 100`;
 
-var finalPath = `M 10 100 Q 500 100 990 100"`;
+var finalPath = `M 10 100 Q 500 100 990 100`;
 
-var string = document.querySelector('#string');
-string.addEventListener('mouseenter', function(){
-    console.log("enter");
-})
-string.addEventListener('mouseleave', function(){
-    console.log("leave");
-})
+const string = document.querySelector('#string');
+const pathEl = document.querySelector('#string svg path');
+
+string.addEventListener('mousemove', (e) => {
+  const rect = string.getBoundingClientRect();
+  const y = e.clientY - rect.top;
+  const x = e.clientX - rect.top; // mouse Y inside the box
+   // mouse Y inside the box
+  const path = `M 10 100 Q ${x} ${y} 990 100`;
+
+  gsap.to(pathEl, {
+    attr: { d: path },
+    duration: 0.2,
+    ease: 'power3.out',
+  });
+});
+
+string.addEventListener('mouseleave', () => {
+  gsap.to(pathEl, {
+    attr: { d: finalPath },
+    duration: 1.2,
+    ease:'elastic.out(1,0.2)'
+
+  });
+}
+)
+
